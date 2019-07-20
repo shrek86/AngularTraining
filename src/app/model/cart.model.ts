@@ -34,7 +34,7 @@ export class Cart{
     removeLine(id : number){
         let lineIndex = this.lines.findIndex(line => line.product.id ==id);
         if(lineIndex != undefined){
-            this.lines.splice(lineIndex);
+            this.lines.splice(lineIndex, 1);
             this.recalculate();
         }
     }
