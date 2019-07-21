@@ -11,6 +11,7 @@ public city : string;
 public state : string;
 public zip : string;
 public country : string;
+public email:string;
 public shipped: boolean = false;
 
 constructor( 

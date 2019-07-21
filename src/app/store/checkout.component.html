@@ -17,9 +17,9 @@
       (ngSubmit)="submitOrder(form)" class="m-a-1">
     <div class="form-group">
         <label>Name</label>
-        <input class="form-control" #name="ngModel" name="name" 
+        <input class="form-control" #name="ngModel" name="name"  
                [(ngModel)]="order.name" required />
-        <span  *ngIf="submitted && name.invalid" class="text-danger">
+        <span  *ngIf="submitted && name.invalid && error.pattern.invalid" class="text-danger">
             Please enter your name
         </span>
     </div>
@@ -61,6 +61,14 @@
                [(ngModel)]="order.country" required />
         <span  *ngIf="submitted && country.invalid" class="text-danger">
             Please enter your country
+        </span>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" type="email" #email="ngModel" name="email" 
+               [(ngModel)]="order.email" required />
+        <span  *ngIf="submitted && email.invalid && error.email.invalid" class="text-danger">
+            Please enter your Email
         </span>
     </div>
     <div class="text-xs-center">
