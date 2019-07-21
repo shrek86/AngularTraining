@@ -6,6 +6,7 @@ describe('AuthComponent', () => {
   let component: AuthComponent;
   let fixture: ComponentFixture<AuthComponent>;
 
+  //Arrange
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ AuthComponent ]
@@ -19,7 +20,9 @@ describe('AuthComponent', () => {
     fixture.detectChanges();
   });
 
+  //Act
   it('should create', () => {
+    //Assert
     expect(component).toBeTruthy();
   });
 });
